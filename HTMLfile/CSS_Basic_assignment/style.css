@@ -1,0 +1,32 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: blue; 
+    background-color: #f4f4f4; 
+}
+.border-example {
+    border: 3px solid red; 
+}
+.header-example {
+    font-size: 2em; 
+    font-family: "Georgia", serif;
+    color: darkblue; 
+}
+.list-example {
+    list-style-type: square;
+    color: green;
+}
+.text-example {
+    font-family: "Courier New", monospace;
+    font-size: 1.5em;
+    text-transform: capitalize; 
+    text-decoration: underline;
+}
+.div{
+    background-color: #d4edda; 
+    border: 2px dashed #28a745; 
+    font-size: 1.2em;
+    text-transform: capitalize; 
+    text-decoration: underline; 
+    padding: 10px;
+}
