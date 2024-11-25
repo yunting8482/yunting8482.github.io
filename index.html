@@ -1,29 +1,153 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>My Simple HTML Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML & CSS Template</title>
+    <style>
+        /* CSS Styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            margin: 0px ;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            margin: 0px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+
+            background-color: rgb(86, 52, 52);
+        }
+      
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "content"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0px;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for section, article, and aside */
+    grid-template-rows: 1fr 1fr; /* Two equal rows for section and article */
+    gap: 0px;
+}
+
+section {
+    grid-column: 1; /* Place in the first column */
+    grid-row: 1; /* First row */
+    background-color: #86a6b6;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+article {
+    grid-column: 1; /* Place in the first column */
+    grid-row: 2; /* Second row */
+    background-color: #b68686;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+aside {
+    grid-column: 2; /* Place in the second column */
+    grid-row: span 2; /* Span across both rows */
+    background-color: #a65252;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+    </style>
 </head>
 <body>
-    <header>
-    <nav>
-        <ul>
-            <li><a href="https://github.com/yunting8482/yunting8482.github.io/blob/main/HTML-Basic-Assignment/index.html">Github Repository</a></li>
-            <li><a href="#">© 2024 GitHub, Inc.</a></li>    
-        </ul>
-    </nav>
+    <div class="container">
+     <header>
+        <h1>Welcome to My Website</h1>
     </header>
-    <main>
-        <h2>My name is Yun-Ting.The countries I had been to:</h2>
-        <p>I had been to Japan,China,Poland,Germany,Czech Republic,Austria,Switzerland,France,Italy,Turkey,Israel, Palestine,Greece,<br>
-            United State,Canada,Vietnam,Finland,Estonia,Sweden,Norway,Denmark,Hungary,Macedonia,Tunisia,Spain,Malta,Latvia,Lithuania,Portugal<br>
-            United Kingdom,Cyprus,Singapore,Slovakia,Belgium,Holland,Korea,Philipine,United Arabia,Thailand,Egypt,Luxemburg,Albania,Montenegro,<br>
-            Romania,Bulgaria
-        </p>
-    </main>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="C:\Users\USER\Desktop\Laurea\Foundation of Web development\HTML-Basic-Assignment\index.html.html">About Me</a>
+        <a href="C:\Users\USER\Desktop\Laurea\Foundation of Web development\HTMLfile\test-sites\index.html\second.html">My Business</a>
+    </nav>
+    <div class="content">
+        <section>
+        <h2>What are this website about?</h2>
+        <p>This is just a website to let people know some basic about me.</p>
+    </section>
+        <article>
+        <h2>What are my studies?</h2>
+        <p>I am currently studing in Business and Information Technology,Developing Digital services degree.</p>
+        </article>
+        <aside>
+            <h4>Fun fact about me</h4>
+            <p>I had been to 47 coutries<br>
+             I have two cats<br>
+            I had won championship of TAEKWANDO in my country.
+            </p>
+        </aside>
+    </div>
     <footer>
-        <p>&copy; 2024 Kao,Yun-Ting</p>
-    </footer>
+        <p>&copy; 2024 My Website</p>
+        </footer>       
 </body>
 </html>
