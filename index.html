@@ -1,153 +1,222 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic HTML & CSS Template</title>
-    <style>
-        /* CSS Styles go here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav {
-            height: 100px;
-            width: 100%;
-            text-align: center;
-            margin: 0px ;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: black;
-            padding: 10px 15px;
-            margin: 0px;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-
-            background-color: rgb(86, 52, 52);
-        }
-      
-.container {
-    display: grid;
-    grid-template-areas: 
-        "header"
-        "nav"
-        "content"
-        "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 0px;
-    height: 100vh;
-    padding: 10px;
-    box-sizing: border-box;
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Times New Roman", Times, serif;}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://i.imgur.com/FaIvgov.jpeg");
+  min-height:120%;
 }
-header {
-    grid-area: header;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+i {
+  transition: transform 0.2s ease;
 }
 
-nav {
-    grid-area: nav;
-    background-color: #555;
-    color: white;
-    text-align: center;
-    padding: 10px;
+i:hover {
+  transform: scale(1.2);
+  color: orange;
 }
 
-
-
-.content {
-    grid-area: content;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for section, article, and aside */
-    grid-template-rows: 1fr 1fr; /* Two equal rows for section and article */
-    gap: 0px;
-}
-
-section {
-    grid-column: 1; /* Place in the first column */
-    grid-row: 1; /* First row */
-    background-color: #86a6b6;
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-article {
-    grid-column: 1; /* Place in the first column */
-    grid-row: 2; /* Second row */
-    background-color: #b68686;
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-aside {
-    grid-column: 2; /* Place in the second column */
-    grid-row: span 2; /* Span across both rows */
-    background-color: #a65252;
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-footer {
-    grid-area: footer;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-
-    </style>
+</style>
 </head>
 <body>
-    <div class="container">
-     <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="C:\Users\USER\Desktop\Laurea\Foundation of Web development\HTML-Basic-Assignment\index.html.html">About Me</a>
-        <a href="C:\Users\USER\Desktop\Laurea\Foundation of Web development\HTMLfile\test-sites\index.html\second.html">My Business</a>
-    </nav>
-    <div class="content">
-        <section>
-        <h2>What are this website about?</h2>
-        <p>This is just a website to let people know some basic about me.</p>
-    </section>
-        <article>
-        <h2>What are my studies?</h2>
-        <p>I am currently studing in Business and Information Technology,Developing Digital services degree.</p>
-        </article>
-        <aside>
-            <h4>Fun fact about me</h4>
-            <p>I had been to 47 coutries<br>
-             I have two cats<br>
-            I had won championship of TAEKWANDO in my country.
-            </p>
-        </aside>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button"><i class="fas fa-home"></i> HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button"><i class="fas fa-dollar-sign"></i> PRICING</a>
+    <a href="#about" class="w3-bar-item w3-button"><i class="fas fa-info-circle"></i> ABOUT</a>
+    <a href="#myMap" class="w3-bar-item w3-button"><i class="fas fa-phone-alt"></i> CONTACT</a>
+  </div>
+  
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Open from 12pm to 8pm on weekdays</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">KAO<br>WELLNESS</span>
+    
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the treatments</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE TREATMENTS</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Facial Treatments');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Facial Treatments</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Body Treatments');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Body Treatments</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'SPA Pampering');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">SPA Pampering</div>
+      </a>
     </div>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-        </footer>       
+
+    <div id="Facial Treatments" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Gua Sha Facial</b> <span class="w3-right w3-tag w3-dark-grey w3-round">60 euros</span></h1>
+      <p class="w3-text-grey">Gua Sha is a traditional Chinese treatment that stimulates blood circulation in the treated area and enhance metabolism.We will apply oil suitable for your face and start Gua Sha massage on your face.</p>
+      <hr>
+   
+      <h1><b>Moisturizing Facial</b> <span class="w3-right w3-tag w3-dark-grey w3-round">79 euros</span></h1>
+      <p class="w3-text-grey">We use our professional moisturizing machine to clean,exfoliate and moisturize your skin.It includes light treatments and two different masks.</p>
+      <hr>
+      
+      <h1><b>Deep Cleansing</b> <span class="w3-right w3-tag w3-dark-grey w3-round">60 euros</span></h1>
+      <p class="w3-text-grey">We use our professional machine to clean up the face and make it brighter and smoother.It can also include some manual cleansing.</p>
+      <hr>
+
+      <h1><b>Thai Herbal Facial</b> <span class="w3-right w3-tag w3-dark-grey w3-round">79 euros</span></h1>
+      <p class="w3-text-grey">This treatment is specially designed for sensitive skin.It will start with thai compress and end with avocado masks.</p>
+      <hr>
+
+      <h1><b>Ultrasound and Diamond Cleansing</b> <span class="w3-tag w3-red w3-round">Popular!</span><span class="w3-right w3-tag w3-dark-grey w3-round">99 euros</span></h1>
+      <p class="w3-text-grey">We use newest ultrasound and diamond machine imported from Korea to clean the dirt and oil in the pore and remove the old,dead skins.</p>
+      <hr>
+
+      <h1><b>Men' Facial</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">70 euros</span></h1>
+      <p class="w3-text-grey">Our special moisturizing treatment for men.This is suitable for all skin types.</p>
+    </div>
+
+    <div id="Body Treatments" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Sport Massage</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">60 euros</span></h1>
+      <p class="w3-text-grey">It is the strongest and deepest massage among all.Our sport massgae relaxes your tense muscles and reduce your stress levels.</p>
+      <hr>
+   
+      <h1><b>Hot Stone Massage</b> <span class="w3-right w3-tag w3-dark-grey w3-round">99 euros</span></h1>
+      <p class="w3-text-grey">Hot stone massage is a special massage therapist uses smooth,heated stones to plave on your body while they massage your body with them at the same time.</p>
+      <hr>
+      
+      <h1><b>Chinese Cupping Massage</b> <span class="w3-right w3-tag w3-dark-grey w3-round">60 euros</span></h1>
+      <p class="w3-text-grey">We use traditional Chines cupping therapeutic method to increase blood circulation,reduce muscle tension,and promot overall well-being.</p>
+      <hr>
+
+      <h1><b>Aroma Massage</b> <span class="w3-right w3-tag w3-dark-grey w3-round">60 euros</span></h1>
+      <p class="w3-text-grey">Aroma massage is a gentle,soothing massage for whole body.</p>
+    </div>
+
+
+    <div id="SPA Pampering" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Heaven Forever</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">175 euros</span></h1>
+      <p class="w3-text-grey">Heaven Forever intended to bring you to the heaven.We will massage you from head to toes including head and face massgae,aroma massage and foot massage.This package tales about 3 hours.</p>
+      <hr>
+   
+      <h1><b>Self-Pampering</b> <span class="w3-right w3-tag w3-dark-grey w3-round">175 euros</span></h1>
+      <p class="w3-text-grey">Self-Pampering included three different treatment.We will first scrub your whole body with fruity scrub and apply tomato mask after.After taking a shower,we provide Thai herbal massage and head and face massage.This package takes about 3 hours. </p>
+      <hr>
+      
+      <h1><b>All-Inclusive</b> <span class="w3-right w3-tag w3-dark-grey w3-round">190 euros</span></h1>
+      <p class="w3-text-grey">All All-Inclusive combined three treatments from head to toes.We will first scrub your body with luxurious scrubs and apply moisturizing body masks .After all we provide Gua Sha facial,aroma massgae altogether.This package takes about 3 hours.</p>
+      <hr>
+      
+      <h1><b>Mama'Mia</b> <span class="w3-right w3-tag w3-dark-grey w3-round">190 euros</span></h1>
+      <p class="w3-text-grey">Mama'Mia is the most pampering services can be chosen by yhourslef.You are welcome to choose three different treatments you like,we will combine them together.This package takes about 3 hours.</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    <p>KAO WELLNESS is a wellness and massage service provider based in Helsinki, Finland, offering a unique combination of Western and Oriental techniques. Our goal is to deliver a luxurious and exotic experience for our customers, blending the rich traditions of Thai and Chinese wellness practices with modern methods.</p>
+    <p><strong>The therapist</strong> Mrs.Kao<img src="https://i.imgur.com/Ax7PupJ.jpeg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <p>We are proud of our therapists.Hollywood star,Lily Collins had visited our store many times.Mrs.Kao was the one given her services.</p>
+    <img src="https://i.imgur.com/QirTcej.jpeg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Massage bed">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Monday 12:00-20:00</p>
+        <p>Tuesday 12:00-20:00</p>
+        <p>Wednesday 12:00 - 20:00</p>
+        <p>Thursday 12:00 - 20:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Friday 10:00 - 20:00</p>
+        <p>Saturday 10:00 - 20:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="https://i.imgur.com/2ivYmLQ.jpeg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+    <p>Find us at the address in Helsinki or call us at 0444xxx-xxx.</p>
+    <p><span class="w3-tag">FYI!</span> We accept group-booking for any event, large or small. We understand your special requests.</p>
+    <p class="w3-xxlarge"><strong>Reserve</strong> a place,  or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+<div>
+    <a href="https://www.facebook.com" target="_blank">
+      <i class="fab fa-facebook-square" style="font-size: 2rem; color: #3b5998; margin: 10px;"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+      <i class="fab fa-twitter-square" style="font-size: 2rem; color: #1DA1F2; margin: 10px;"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <i class="fab fa-instagram" style="font-size: 2rem; color: #E1306C; margin: 10px;"></i>
+    </a>
+  </div>
+  
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>© 2024 Kao Wellness</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
 </body>
 </html>
